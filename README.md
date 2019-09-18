@@ -2,6 +2,10 @@
 猜测网址的logo链接
 Detection of logo url from any website.
 
+# How to install.
+```
+pip3 install guess_logo
+```
 
 # How to use.
 
