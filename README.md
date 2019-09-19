@@ -18,4 +18,11 @@ url = 'http://www.txdkj.com/'
 
 logos = GuessLogo.guess(url)
 print(logos)
+
+# 调整logo大小
+height = 256
+width = 512
+source = 'demo/ifengLogo.png'
+target = 'demo/ifengLogo_{}_{}.png'.format(width, height)
+Logo.resize(source, target, width, height, bgcolor='transparent')
 ```

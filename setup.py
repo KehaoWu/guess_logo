@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='guess_logo',
-      version='0.0.2',
+      version='0.0.3',
       description="Detect logo url for any website.",
       long_description="",
       classifiers=["Development Status :: 5 - Production/Stable",
