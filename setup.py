@@ -1,9 +1,13 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(name='guess_logo',
       version='0.0.7',
       description="Detect logo url for any website.",
-      long_description="",
+      long_description=long_description,
+      long_description_content_type="text/markdown",
       classifiers=["Development Status :: 5 - Production/Stable",
                    "License :: OSI Approved :: Apache Software License",
                    "Programming Language :: Python :: 3.5",
