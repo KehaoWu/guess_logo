@@ -11,7 +11,7 @@ pip3 install guess_logo
 
 ```
 from guess_logo import GuessLogo
-from guess_logo import Logo
+
 
 url = 'http://www.txdkj.com/'
 
@@ -20,9 +20,18 @@ logos = GuessLogo.guess(url)
 print(logos)
 
 # 调整logo大小
+from guess_logo import Logo
 height = 256
 width = 512
 source = 'demo/ifengLogo.png'
 target = 'demo/ifengLogo_{}_{}.png'.format(width, height)
 Logo.resize(source, target, width, height, bgcolor='transparent')
+
+
+# 替换白色为透明
+from guess_logo import ColorLogo
+source = 'demo/logo.jpeg'
+target = 'demo/logo.transparent.png'
+ColorLogo.replace(source, target)
+
 ```
