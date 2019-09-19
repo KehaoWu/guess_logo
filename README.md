@@ -11,7 +11,7 @@ pip3 install guess_logo
 
 ```
 from guess_logo import GuessLogo
-
+from guess_logo import Logo
 
 url = 'http://www.txdkj.com/'
 

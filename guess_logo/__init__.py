@@ -1,2 +1,2 @@
-from guess_logo import GuessLogo
-from logo import Logo
+from .guess_logo import GuessLogo
+from .logo import Logo

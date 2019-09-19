@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='guess_logo',
-      version='0.0.3',
+      version='0.0.5',
       description="Detect logo url for any website.",
       long_description="",
       classifiers=["Development Status :: 5 - Production/Stable",
@@ -16,5 +16,5 @@ setup(name='guess_logo',
       packages=['guess_logo'],
       include_package_data=True,
       zip_safe=True,
-      install_requires=["selenium>=3.0.0"],
+      install_requires=["selenium>=3.0.0", "opencv-python>=4.0.0", "numpy>=1.0.0"],
       entry_points="")
