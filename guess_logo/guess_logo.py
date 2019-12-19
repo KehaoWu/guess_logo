@@ -10,6 +10,14 @@ class GuessLogo:
     option.add_argument("headless")
 
     @staticmethod
+    def guess_logo_by_shortcut(browser):
+        try:
+            item = browser.find_element_by_xpath("//link[contains(@ref, 'shortcut')]")
+            return item.get_attribute('href')
+        except Exception:
+            return None
+
+    @staticmethod
     def guess_logo_by_favicon(browser):
         try:
             item = browser.find_element_by_xpath("//link[contains(@href, 'favicon')]")
@@ -63,6 +71,7 @@ class GuessLogo:
         logos.append(cls.guess_logo_by_favicon(browser))
         logos.append(cls.guess_logo_by_img_url(browser))
         logos.append(cls.guess_logo_by_parent(browser))
+        logos.append(cls.guess_logo_by_shortcut(browser))
 
         logos = list(filter(lambda item: item, logos))
         browser.close()
